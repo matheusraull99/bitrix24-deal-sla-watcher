@@ -1,0 +1,29 @@
+{
+  "regras": [
+    {
+      "estagio_id": "C1:NEW",
+      "rotulo": "Primeiro contato",
+      "dias_uteis": 1,
+      "escalar_para": 42,
+      "dias_para_escalar": 1
+    },
+    {
+      "estagio_id": "C1:PREPARATION",
+      "rotulo": "Proposta enviada",
+      "dias_uteis": 5,
+      "escalar_para": 42,
+      "dias_para_escalar": 3
+    },
+    {
+      "estagio_id": "C1:EXECUTING",
+      "rotulo": "Negociacao",
+      "dias_uteis": 10,
+      "escalar_para": 42,
+      "dias_para_escalar": 5
+    }
+  ],
+  "feriados_extras": [
+    "2026-01-25",
+    "2026-07-09"
+  ]
+}
