@@ -38,7 +38,7 @@ def pascoa(ano: int) -> date:
     g = (b - f + 1) // 3
     h = (19 * a + b - d - g + 15) % 30
     i, k = divmod(c, 4)
-    l = (32 + 2 * e + 2 * i - h - k) % 7  # noqa: E741 - nome do algoritmo original
+    l = (32 + 2 * e + 2 * i - h - k) % 7  # `l` e o nome da variavel no algoritmo original
     m = (a + 11 * h + 22 * l) // 451
     mes, dia = divmod(h + l - 7 * m + 114, 31)
     return date(ano, mes, dia + 1)

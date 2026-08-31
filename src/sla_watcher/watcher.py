@@ -25,6 +25,7 @@ from typing import Any
 from bitrix24_client import Bitrix24
 
 from .feriados import dias_uteis_entre, somar_dias_uteis
+from .tempo import hoje as hoje_no_brasil
 
 log = logging.getLogger("sla_watcher")
 
@@ -150,7 +151,7 @@ class SLAWatcher:
 
     def varrer(self, hoje: date | None = None) -> list[Violacao]:
         """Devolve as violações encontradas, já filtradas por anti-spam."""
-        hoje = hoje or date.today()
+        hoje = hoje or hoje_no_brasil()
         negocios = list(
             self.bx.fetch_all(
                 "crm.deal.list",
